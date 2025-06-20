@@ -1,324 +1,217 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
-
-:root {
-  --clr-primary: #fe2222;
-  --clr-secondary: #000000;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background: #fff;
-  color: var(--clr-secondary);
-  overflow-x: hidden;
+  font-family: "Itim", cursive;
 }
 
-.section {
-  width: 100%;
-  padding: 40px 0;
-}
-
-.flex {
+.hero-section {
+  background-color: #f0efef;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.container {
-  padding: 0 30px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Itim", cursive;
 }
 
-.primary {
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 20px;
+.btn-danger {
+  background-color: #ff2c2c;
+  border: none;
 }
 
-.secondary {
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 20px;
+.btn-danger:hover {
+  background-color: #e02525;
 }
 
-.tertiary {
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 20px;
+.btn-outline-danger {
+  color: #ff2c2c;
+  border-color: #ff2c2c;
 }
 
-.btn {
-  padding: 14px 20px;
-  background: var(--clr-primary);
-  border-radius: 4px;
+.btn-outline-danger:hover {
+  background-color: #ff2c2c;
   color: #fff;
-  text-decoration: none;
-  font-size: 22px;
-  display: inline-block;
-  margin: 20px 0;
-  transition: transform 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.1);
-  color: #000;
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.span1 {
-  color: #fe2222;
+footer {
+  font-family: "Itim", cursive;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-nav {
-  height: 80px;
+/* Uniform Image Size */
+.food-drink-img {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.food-drink-img:hover {
+  transform: scale(1.03);
+}
+
+/* Always active pulse animation for hero image */
+.hero-section img {
+  animation: pulse-heart 2s infinite;
+}
+
+@keyframes pulse-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Special Section Cards */
+.special-card {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.special-card.bg-danger {
+  background-color: #ff2c2c !important;
+  color: #fff;
+}
+
+.special-card:hover {
+  background-color: #ff2c2c !important;
+  color: #fff;
+}
+
+/* About Image Hover */
+.about-img {
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+}
+
+/* Sidebar mobile */
+.mobile-sidebar {
   position: fixed;
   top: 0;
-  background: #fff5f2;
-  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.22);
-  z-index: 22;
-}
-
-label.logo {
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 30px;
-  font-weight: 700;
-}
-
-.img1 {
-  position: relative;
-  left: 28px;
-  top: 5px;
-  width: 100px;
-  height: 70px;
-}
-
-nav ul {
-  position: relative;
-  bottom: 70px;
-  float: right;
-  margin-right: 20px;
-}
-
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-
-nav ul li a {
-  font-size: 18px;
-  padding: 7px 13px;
-  text-decoration: none;
-  color: var(--clr-secondary);
-}
-
-.z a.active,
-.menu a:hover {
-  border-bottom: 2px solid var(--clr-primary);
-  transition: 0.3s;
-}
-
-.checkbtn {
-  font-size: 30px;
-  color: #fff;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
-}
-
-#hero-section {
-  background: #fff5f2;
-  margin-top: 60px;
-}
-
-.text,
-.visual {
-  width: 50%;
-}
-
-.text {
-  margin: 0 20px;
-}
-
-.visual img {
-  width: 90%;
-  height: auto;
-  display: block;
-  border-radius: 30px;
-}
-
-#hero-section .text {
-  margin-left: 30px;
-}
-
-#hero-section .visual img {
-  margin-left: auto;
-}
-
-#how-it-works {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.box {
-  border: 1px solid #b2b2b2;
-  padding: 25px 5px;
-  margin: 0 10px;
-  border-radius: 8px;
-  font-size: 18px;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.box ion-icon {
-  font-size: 35px;
-  color: var(--clr-primary);
-  margin: 15px 0;
-}
-
-.box.active,
-.box:hover {
-  color: #fff;
-  border-color: var(--clr-primary);
-  background: var(--clr-primary);
-}
-
-.box.active ion-icon,
-.box:hover ion-icon {
-  color: #fff;
-}
-
-#about .visual img,
-#app .visual img {
-  margin-right: auto;
-}
-
-.category {
-  list-style: none;
-  text-align: center;
-  margin: 20px 0 40px 0;
-}
-
-.category li {
-  display: inline-block;
-  margin: 0 15px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.category li.active {
-  color: var(--clr-primary);
-}
-
-.restaurant-menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 70px;
-}
-.h1cards{
-
-  font-size: larger;
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.menu-item {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #f6f3f3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-right-radius: 70px;
-  border-radius: 5px;
-  box-shadow: 1px 2px 30px 2px;
-  transition: transform 1.3s;
-}
-
-.menu-item img:hover {
-  transform: scale(1.1);
-}
-
-.order {
-  width: 90%;
-  justify-content: space-between;
-  display: flex;
-  padding: 20px;
-}
-
-.price {
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--clr-primary);
-  padding: 20px;
-}
-
-.btn-menu {
-  padding: 6px 10px;
-  font-size: 16px;
-  text-align: center;
-  background: #fff;
-  border: 1px solid var(--clr-primary);
-  color: var(--clr-primary);
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-menu:hover {
-  background-color: var(--clr-primary);
-  color: #fff;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: 300;
-  margin: 30px 20px 10px;
-}
-
-.location {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 5px 10px;
-}
-
-
-.containerMaps{
-  width: 100%;
+  left: -250px; /* Hidden by default */
+  width: 250px;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  background-color: #ff2c2c;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 1050;
+  padding-top: 60px; /* space for header */
+  overflow-y: auto;
 }
-.h1maps{
-  color:black;
-  margin-bottom: 60px;
-}   se pari rregulloje dhe beje responsive pjesen e hamburger 
 
+.mobile-sidebar.active {
+  left: 0;
+}
 
+.mobile-sidebar .btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  filter: invert(1);
+  background: transparent;
+  border: none;
+}
+
+/* Sidebar nav links */
+.mobile-sidebar nav a {
+  cursor: pointer;
+}
+
+/* Hide sidebar on desktop */
+@media (min-width: 768px) {
+  .mobile-sidebar {
+    display: none;
+  }
+}
+
+/* Responsive image size for food and drinks on mobile */
+@media (max-width: 767.98px) {
+  .food-drink-img {
+    height: 160px;
+  }
+}
+
+/* Responsive map */
+.map-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* Sidebar background me hije dhe më të theksuar */
+.mobile-sidebar {
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+  background-color: #d22b2b; /* pak më e ndezur kuq */
+  border-right: 3px solid #ff2c2c;
+}
+
+/* Butoni Close - buton i dukshëm me sfond të kuq dhe kurse pointer */
+.mobile-sidebar .btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff2c2c !important; /* sfond kuq */
+  border-radius: 50%;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ikona X brenda butonit Close */
+.mobile-sidebar .btn-close::before,
+.mobile-sidebar .btn-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+.mobile-sidebar .btn-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile-sidebar .btn-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Efekt hover për butonin Close */
+.mobile-sidebar .btn-close:hover {
+  background-color: #cc0000 !important;
+}

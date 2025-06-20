@@ -1,281 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taverne Jack</title>
-  <!-- CSS -->
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tavern Jack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="./style.css" />
-
 </head>
 
 <body>
-  <div class="section flex" id="hero-section">
-    <div class="text">
-      <h1 class="primary">
-        Good taste, warm welcome.
-      </h1>
+  <!-- Header -->
+  <header class="bg-light py-3 border-bottom position-relative">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <img src="./img/7ca98bb7-4283-4b72-abb6-10eb09c2259f-removebg-preview.png" alt="Logo Tavern Jack" height="50" width="70" />
 
-      <p class="tertiary">
-        Our food is more than flavor – it’s a connection that brings people together and creates unforgettable memories.
-      </p>
+      <!-- Hamburger Toggle Button for mobile -->
+      <button id="hamburgerBtn" class="btn btn-outline-danger d-md-none">
+        <i class="fas fa-bars fs-3"></i>
+      </button>
 
-      <a href="#menu" class="btn">Explore Menu</a>
+      <!-- Nav Links for desktop -->
+      <nav id="navLinks" class="d-none d-md-flex flex-row align-items-center gap-3">
+        <a href="#home" class="text-dark text-decoration-none">Accueil</a>
+        <a href="#about" class="text-dark text-decoration-none">À propos</a>
+        <a href="#food" class="text-dark text-decoration-none">Nourriture</a>
+        <a href="#drinks" class="text-dark text-decoration-none">Boissons</a>
+        <a href="#location" class="text-dark text-decoration-none">Localisation</a>
+        <a href="./contact.html" class="btn btn-danger ms-3">Contact</a>
+      </nav>
     </div>
-    <div class="visual">
-      <img src="img/heroimg.png" alt="" />
+
+    <!-- Sidebar for mobile -->
+    <div id="mobileSidebar" class="mobile-sidebar">
+      <button id="closeSidebar" class="btn btn-close btn-close-white"></button>
+      <nav class="d-flex flex-column p-3">
+        <a href="#home" class="mb-3 text-white text-decoration-none fs-5">Accueil</a>
+        <a href="#about" class="mb-3 text-white text-decoration-none fs-5">À propos</a>
+        <a href="#food" class="mb-3 text-white text-decoration-none fs-5">Nourriture</a>
+        <a href="#drinks" class="mb-3 text-white text-decoration-none fs-5">Boissons</a>
+        <a href="#location" class="mb-3 text-white text-decoration-none fs-5">Localisation</a>
+        <a href="./contact.html" class="btn btn-danger mt-3">Contact</a>
+      </nav>
     </div>
-  </div>
-  <!-- Menu -->
-  <div class="menu">
-    <nav>
-      <input type="checkbox" id="check" />
-      <label for="check" class="checkbtn">
-        <ion-icon name="grid-outline"></ion-icon>
-      </label>
-
-      <img class="img1" src="./img/7ca98bb7-4283-4b72-abb6-10eb09c2259f-removebg-preview.png" alt="">
-
-      <ul>
-        <li><a href="#hero-section" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#food">Food</a></li>
-        <li><a href="#drink">Drinks</a></li>
-        <li><a href="#maps">Location</a></li>
-
-      </ul>
-    </nav>
-  </div>
-  <!-- End Menu -->
+  </header>
 
   <!-- Hero Section -->
-  <!-- End Hero Section -->
-
-  <!-- How It Works -->
-  <div class="section" id="how-it-works">
-    <h2 class="secondary">What Makes Us Special</h2>
-
-    <div class="container flex">
-      <div class="box">
-        <h3>Very quickly</h3>
-        <ion-icon name="timer-outline"></ion-icon>
-        <p>
-          Your food is delivered fast – fresh and right to your table!
+  <section class="hero-section text-center text-lg-start" id="home">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold">Bon goût, accueil chaleureux.</h1>
+        <p class="lead">
+          Notre nourriture est plus qu'une saveur – c’est un lien qui réunit les gens et crée des souvenirs
+          inoubliables.
         </p>
+        <a href="./food.html" class="btn btn-danger">Nourriture</a>
+        <a href="./drinks.html" class="btn btn-danger">Boissons</a>
       </div>
-
-      <div class="box active">
-        <h3>Best Quality</h3>
-        <ion-icon name="trophy-outline"></ion-icon>
-        <p>
-          High quality, fresh ingredients – every bite made to impress!
-        </p>
+      <div class="col-lg-5 mt-4 mt-lg-0">
+        <img src="./img/heroimg.png" alt="Légumes en forme de cœur" class="img-fluid mx-auto d-block" />
       </div>
-
-      <div class="box">
-        <h3>Taste of Tradition</h3>
-        <ion-icon name="checkmark-done-circle-outline"></ion-icon>
-        <p>
-          Traditional recipes with true flavor – made with love.
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- End How It Works -->
-
-  <!-- About -->
-  <div class="section" id="about">
-    <div class="container flex">
-      <div class="visual">
-        <img src="./img/tavernejackphoto.jpg" alt="" />
-      </div>
-      <div class="text">
-        <div class="secondary">About Our Restaurant</div>
-        <h2 class="primary">27 February 2019</h2>
-
-        <h3 class="tertiary">Experience and Atmosphere</h3>
-
-        <p>
-          Known as a relatively pleasant place with a cozy and informal atmosphere, typical of Belgian pubs.
-        </p>
-
-        <a href="#about" class="btn">More About Us</a>
-      </div>
-    </div>
-  </div>
-  <!-- End About -->
-
-  <!-- Restaurant Menu -->
-  <div class="section" id="food">
-    <div class="container">
-      <ul class="category">
-        <h1 class="h1cards">Food</h1>
-      </ul>
-
-      <div class="container">
-        <div class="restaurant-menu">
-          <div class="menu-item">
-            <img src="./FOOD1-IMG/pexels-shameel-mukkath-3421394-5175528.jpg" alt="" />
-
-            <div class="title">Food Restaurant | Taverne Jack</div>
-
-            <div class="location">Evere, Bruksel</div>
-
-            <div class="order flex">
-              <div class="price">Click Button →</div>
-              <a href="./food.html" class="btn btn-menu">All Food</a>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <img src="./FOOD1-IMG/pexels-monicore-1391487.jpg" alt="" />
-
-            <div class="title">Food Restaurant | Taverne Jack</div>
-
-            <div class="location">Evere, Bruksel</div>
-
-            <div class="order flex">
-              <div class="price">Click Button →</div>
-              <a href="./food.html" class="btn btn-menu">All Food</a>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <img src="./FOOD1-IMG/pexels-rajesh-tp-749235-1603901.jpg" alt="" />
-
-            <div class="title">Food Restaurant | Taverne Jack</div>
-
-            <div class="location">Evere, Bruksel</div>
-
-            <div class="order flex">
-              <div class="price">Click Button →</div>
-              <a href="./FOOD1-IMG/pexels-shameel-mukkath-3421394-5175528.jpg" class="btn btn-menu">All Food</a>
-            </div>
-          </div>
-
-
-
-
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- =================================== -->
-  <div class="section" id="drink">
-    <div class="container">
-      <ul class="category">
-        <h1 class="h1cards">Drink</h1>
-      </ul>
-
-      <div class="container">
-        <div class="restaurant-menu">
-          <div class="menu-item">
-            <img src="./DRINKS1-IMG/pexels-decha-huayyai-386244-1033934.jpg" alt="" />
-            <div class="title">Food Restaurant | Taverne Jack</div>
-
-            <div class="location">Evere, Bruksel</div>
-            <div class="order flex">
-              <div class="price">Click Button →</div>
-              <a href="./drinks.html" class="btn btn-menu">All Drinks</a>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <img src="./DRINKS1-IMG/pexels-edwardeyer-667986.jpg" alt="" />
-            <div class="title">Food Restaurant | Taverne Jack</div>
-
-            <div class="location">Evere, Bruksel</div>
-            <div class="order flex">
-              <div class="price">Click Button →</div>
-              <a href="./DRINKS1-IMG/pexels-nathan-hardig-2247916-4168799.jpg" class="btn btn-menu">All Drinks</a>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <img src="./DRINKS1-IMG/pexels-nathan-hardig-2247916-4168799.jpg" alt="" />
-            <div class="title">Food Restaurant | Taverne Jack</div>
-
-            <div class="location">Evere, Bruksel</div>
-
-            <div class="order flex">
-              <div class="price">Click Button →</div>
-              <a href="./drinks.html" class="btn btn-menu">All Drinks</a>
-            </div>
-          </div>
-
-
-
-
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <section>
-    <div class="containerMaps" id="maps">
-      <h1 class="h1cards">Location Tavern Jack</h1>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1506.4063859009104!2d4.3977780144765575!3d50.86838222548032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3c4efef6841%3A0x3d49beac39c6c653!2sTaverne%20Jack!5e0!3m2!1sen!2s!4v1750366378682!5m2!1sen!2s"
-        width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
-
-
-
-
-  <footer class="bg-white rounded-lg shadow-sm dark:bg-gray-100 m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-          <img src="./img/7ca98bb7-4283-4b72-abb6-10eb09c2259f-removebg-preview.png" class="h-8" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Tavern Jack</span>
-        </a>
-        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-black-500 sm:mb-0 dark:text-black-100">
-          <li>
-            <a href="#hero-section" class="hover:underline me-4 md:me-6">Home</a>
-          </li>
-          <li>
-            <a href="#about" class="hover:underline me-4 md:me-6">About</a>
-          </li>
-          <li>
-            <a href="#food" class="hover:underline me-4 md:me-6">Food</a>
-          </li>
-          <li>
-            <a href="#drink" class="hover:underline">Drinks</a>
-          </li>
-
-
-        </ul>
+  <!-- Special Section -->
+  <section class="bg-white text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-5">Ce qui nous rend spéciaux</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="p-4 border rounded h-100 special-card">
+            <h5>Très rapidement</h5>
+            <p>Votre nourriture est livrée rapidement – fraîche et directement à votre table !</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded bg-danger text-white h-100 special-card">
+            <h5>Meilleure qualité</h5>
+            <p>Ingrédients frais et de haute qualité – chaque bouchée impressionne !</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded h-100 special-card">
+            <h5>Goût de la tradition</h5>
+            <p>Recettes traditionnelles au vrai goût – préparées avec amour.</p>
+          </div>
+        </div>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025<a
-          href="http://127.0.0.1:5501/index.html" class="hover:underline">Tavern Jack</a>. All Rights Reserved.</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-light" id="about">
+    <div class="container">
+      <div class="row align-items-center justify-content-center gy-4">
+        <div class="col-md-6">
+          <img src="./img/tavernejackphoto.jpg" class="img-fluid rounded mx-auto d-block about-img" alt="Taverne" />
+        </div>
+        <div class="col-md-6 text-center text-md-start">
+          <h3>À propos de notre restaurant</h3>
+          <h2 class="display-5 fw-bold">27 février 2019</h2>
+          <p><strong>Expérience et ambiance</strong></p>
+          <p>
+            Connu comme un lieu relativement agréable avec une atmosphère chaleureuse et informelle, typique des pubs
+            belges.
+          </p>
+          <a href="./contact.html" class="btn btn-danger">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Section -->
+  <section class="text-center bg-white" id="food">
+    <div class="container">
+      <h4 class="mb-4">Nourriture</h4>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <img src="./FOOD1-IMG/pexels-monicore-1391487.jpg" class="img-fluid rounded food-drink-img" alt="Nourriture" />
+          <p class="mt-2">
+            Restaurant | Taverne Jack<br /><strong>Evere, Bruxelles</strong>
+          </p>
+          <a href="./food.html" class="btn btn-outline-danger">Cliquez→</a>
+          <a href="./food.html" class="btn btn-outline-secondary ms-2">Toute la nourriture</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="./FOOD1-IMG/pexels-rajesh-tp-749235-1603901.jpg" class="img-fluid rounded food-drink-img" alt="Nourriture" />
+          <p class="mt-2">
+            Restaurant | Taverne Jack<br /><strong>Evere, Bruxelles</strong>
+          </p>
+          <a href="./food.html" class="btn btn-outline-danger">Cliquez→</a>
+          <a href="./food.html" class="btn btn-outline-secondary ms-2">Toute la nourriture</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="./FOOD1-IMG/pexels-shameel-mukkath-3421394-5175528.jpg" class="img-fluid rounded food-drink-img" alt="Nourriture" />
+          <p class="mt-2">
+            Restaurant | Taverne Jack<br /><strong>Evere, Bruxelles</strong>
+          </p>
+          <a href="./food.html" class="btn btn-outline-danger">Cliquez→</a>
+          <a href="./food.html" class="btn btn-outline-secondary ms-2">Toute la nourriture</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks Section -->
+  <section class="text-center bg-white" id="drinks">
+    <div class="container">
+      <h4 class="mb-4">Boissons</h4>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <img src="./DRINKS1-IMG/pexels-decha-huayyai-386244-1033934.jpg" class="img-fluid rounded food-drink-img" alt="Boisson" />
+          <p class="mt-2">
+            Restaurant | Taverne Jack<br /><strong>Evere, Bruxelles</strong>
+          </p>
+          <a href="./drinks.html" class="btn btn-outline-danger">Cliquez→</a>
+          <a href="./drinks.html" class="btn btn-outline-secondary ms-2">Toutes les boissons</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="./DRINKS1-IMG/pexels-edwardeyer-667986.jpg" class="img-fluid rounded food-drink-img" alt="Boisson" />
+          <p class="mt-2">
+            Restaurant | Taverne Jack<br /><strong>Evere, Bruxelles</strong>
+          </p>
+          <a href="./drinks.html" class="btn btn-outline-danger">Cliquez→</a>
+          <a href="./drinks.html" class="btn btn-outline-secondary ms-2">Toutes les boissons</a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <img src="./DRINKS1-IMG/pexels-nathan-hardig-2247916-4168799.jpg" class="img-fluid rounded food-drink-img" alt="Boisson" />
+          <p class="mt-2">
+            Restaurant | Taverne Jack<br /><strong>Evere, Bruxelles</strong>
+          </p>
+          <a href="./drinks.html" class="btn btn-outline-danger">Cliquez→</a>
+          <a href="./drinks.html" class="btn btn-outline-secondary ms-2">Toutes les boissons</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="bg-light" id="location">
+    <div class="container text-center">
+      <h5>Localisation Tavern Jack</h5>
+      <div class="map-responsive">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20143.716379040347!2d4.362963052237509!3d50.86885607877242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3c4efef6841%3A0x3d49beac39c6c653!2sTaverne%20Jack!5e0!3m2!1sen!2s!4v1750447886918!5m2!1sen!2s"
+          width="960"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top text-center">
+    <div class="container">
+      <p><strong>Tavern Jack</strong></p>
+      <a
+        href="https://www.facebook.com/profile.php?id=100079207083692&sk=photos"
+        target="_blank"
+        class="text-primary fs-4 me-2"
+        aria-label="Facebook"
+        ><i class="fab fa-facebook"></i
+      ></a>
+      <p class="small text-muted">© 2025 Tavern Jack. Tous droits réservés.</p>
     </div>
   </footer>
 
-
-
-
-
-
-
-
-
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

@@ -58,7 +58,7 @@ body {
 
 .single-menu {
   flex: 1 1 calc(33.333% - 20px);
-  background-color: #f9f9f9;
+  background-color: #e1e1e1;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   border-radius: 12px;
