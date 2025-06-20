@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 
 body {
-  font-family: "Itim", cursive;
+ font-family: 'Inter', sans-serif;
   background-color: #fff;
 }
 
@@ -34,8 +34,8 @@ body {
 .title h4 span {
   display: block;
   font-size: 18px;
-  font-style: italic;
-  margin-bottom: -10px;
+      font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
 }
 
 .title h4:before {

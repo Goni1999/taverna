@@ -1,5 +1,5 @@
 body {
-  font-family: "Itim", cursive;
+    font-family: 'Inter', sans-serif;
 }
 
 .hero-section {
@@ -14,7 +14,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Itim", cursive;
+      font-family: 'Playfair Display', serif;
 }
 
 .btn-danger {
