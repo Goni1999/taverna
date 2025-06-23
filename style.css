@@ -1,6 +1,44 @@
+/* ------------------ RREGULLIMET E KËRKUARA ------------------ */
+
+/* Sfond i zi për gjithë body + tekst i bardhë */
 body {
-    font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
+
+/* Header & Footer më të çelët */
+header,
+footer {
+  background-color: #222 !important;
+  color: white;
+}
+
+/* Linket në header/footer bardhë */
+header a,
+footer a {
+  color: white !important;
+}
+
+/* Sfondi i seksioneve që kanë qenë me bg-white */
+section.bg-white {
+  background-color: #000 !important;
+  color: white;
+}
+
+/* Seksione që ishin me bg-light (p.sh. about, location) */
+section.bg-light {
+  background-color: #111 !important;
+  color: white;
+}
+
+/* Tekste të zakonshme në faqe */
+h1, h2, h3, h4, h5, h6,
+p, a, li, span {
+  color: white;
+}
+
+/* ------------------ STILET E MËPARSHME ------------------ */
 
 .hero-section {
   background-color: #f0efef;
@@ -9,12 +47,8 @@ body {
   align-items: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-      font-family: 'Playfair Display', serif;
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
 }
 
 .btn-danger {
@@ -47,7 +81,6 @@ footer {
   padding-bottom: 20px;
 }
 
-/* Uniform Image Size */
 .food-drink-img {
   width: 100%;
   height: 220px;
@@ -61,24 +94,16 @@ footer {
   transform: scale(1.03);
 }
 
-/* Always active pulse animation for hero image */
 .hero-section img {
   animation: pulse-heart 2s infinite;
 }
 
 @keyframes pulse-heart {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
 
-/* Special Section Cards */
 .special-card {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -93,7 +118,6 @@ footer {
   color: #fff;
 }
 
-/* About Image Hover */
 .about-img {
   transition: transform 0.3s ease;
 }
@@ -102,19 +126,20 @@ footer {
   transform: scale(1.03);
 }
 
-/* Sidebar mobile */
 .mobile-sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Hidden by default */
+  left: -250px;
   width: 250px;
   height: 100vh;
-  background-color: #ff2c2c;
+  background-color: #d22b2b;
   color: white;
   transition: left 0.3s ease;
   z-index: 1050;
-  padding-top: 60px; /* space for header */
+  padding-top: 60px;
   overflow-y: auto;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+  border-right: 3px solid #ff2c2c;
 }
 
 .mobile-sidebar.active {
@@ -125,64 +150,9 @@ footer {
   position: absolute;
   top: 15px;
   right: 15px;
-  filter: invert(1);
-  background: transparent;
-  border: none;
-}
-
-/* Sidebar nav links */
-.mobile-sidebar nav a {
-  cursor: pointer;
-}
-
-/* Hide sidebar on desktop */
-@media (min-width: 768px) {
-  .mobile-sidebar {
-    display: none;
-  }
-}
-
-/* Responsive image size for food and drinks on mobile */
-@media (max-width: 767.98px) {
-  .food-drink-img {
-    height: 160px;
-  }
-}
-
-/* Responsive map */
-.map-responsive {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin: auto;
-}
-
-.map-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  border: 0;
-}
-
-/* Sidebar background me hije dhe më të theksuar */
-.mobile-sidebar {
-  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
-  background-color: #d22b2b; /* pak më e ndezur kuq */
-  border-right: 3px solid #ff2c2c;
-}
-
-/* Butoni Close - buton i dukshëm me sfond të kuq dhe kurse pointer */
-.mobile-sidebar .btn-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
   width: 30px;
   height: 30px;
-  background-color: #ff2c2c !important; /* sfond kuq */
+  background-color: #ff2c2c !important;
   border-radius: 50%;
   opacity: 1 !important;
   filter: none !important;
@@ -190,7 +160,6 @@ footer {
   cursor: pointer;
 }
 
-/* Ikona X brenda butonit Close */
 .mobile-sidebar .btn-close::before,
 .mobile-sidebar .btn-close::after {
   content: "";
@@ -211,7 +180,75 @@ footer {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* Efekt hover për butonin Close */
 .mobile-sidebar .btn-close:hover {
   background-color: #cc0000 !important;
 }
+
+.mobile-sidebar nav a {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .food-drink-img {
+    height: 160px;
+  }
+}
+
+.map-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+/* Header ngjyrë gri më e çelët dhe tekst bardhë */
+header {
+  background-color: #222 !important;
+  color: white !important;
+}
+
+/* Hero section me sfond të zi */
+.hero-section {
+  background-color: #000 !important;
+  color: white !important;
+}
+
+/* Footer ngjyrë gri më e çelët */
+footer {
+  background-color: #222 !important;
+  color: white !important;
+}
+
+/* Lidhjet brenda header dhe footer */
+header a,
+footer a {
+  color: white !important;
+}
+
+.special-card {
+  background-color: #1f1f1f;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.special-card.active {
+  background-color: #ff2c2c !important;
+  transform: scale(1.03);
+  color: white;
+}
+

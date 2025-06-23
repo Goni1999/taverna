@@ -1,66 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
-
 body {
   font-family: "Inter", sans-serif;
-  background-color: #fff;
+  background-color: #121212; /* sfond i zi */
+  color: white;
 }
 
-.wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 100px auto;
-  padding: 0 15px;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.title h4 {
-  text-transform: capitalize;
-  font-size: 36px;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
+.title h4,
 .title h4 span {
-  display: block;
-  font-size: 18px;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 10px;
+  color: white;
 }
 
 .title h4:before {
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 2px;
   background-color: red;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; /* QENDRON NE MES */
   gap: 20px;
 }
 
 .single-menu {
   flex: 1 1 calc(33.333% - 20px);
-  background-color: #e1e1e1;
+  background-color: #1e1e1e; /* gri e errët për kartat */
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   text-align: center;
   display: flex;
@@ -68,37 +32,34 @@ body {
   align-items: center;
 }
 
-/* Unifikimi i fotove */
 .single-menu img {
   width: 150px;
   height: 150px;
   object-fit: contain;
   border-radius: 50%;
-  border: 1px solid #ddd;
+  border: 1px solid #555;
   padding: 5px;
   transition: 0.5s;
   margin-bottom: 15px;
 }
 
-/* Efekti i hover – rrotullimi i ushqimit */
 .single-menu:hover img {
   transform: rotate(360deg);
   transition: transform 1.5s ease;
 }
 
-/* Qendër për tekstin */
 .single-menu h4 {
   text-transform: capitalize;
   font-size: 22px;
-  border-bottom: 1px dashed #333;
+  border-bottom: 1px dashed #aaa;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  text-align: center;
+  color: white;
 }
 
 .single-menu h4 span {
   display: block;
-  color: red;
+  color: #ff4444;
   font-style: italic;
   font-size: 18px;
   margin-top: 5px;
@@ -106,12 +67,11 @@ body {
 
 .single-menu p {
   font-size: 14px;
-  color: #555;
+  color: #ccc;
   text-align: center;
   margin-top: 5px;
 }
 
-/* Responsive për telefon */
 @media screen and (max-width: 768px) {
   .single-menu {
     flex: 1 1 100%;
@@ -128,4 +88,36 @@ body {
   .single-menu p {
     font-size: 13px;
   }
+}
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title h4 {
+  text-transform: capitalize;
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: white; /* ose #fff për dark mode */
+}
+
+.title h4 span {
+  display: block;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  color: #ff4444; /* ngjyrë theksuese për pjesën e sipërme */
+}
+
+.title h4:before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: red;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

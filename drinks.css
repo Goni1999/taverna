@@ -1,14 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
-
 body {
- font-family: 'Inter', sans-serif;
-  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212; /* e zezë për sfondin */
+  color: white;
 }
 
 .wrapper {
@@ -29,13 +22,15 @@ body {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
+  color: white;
 }
 
 .title h4 span {
   display: block;
   font-size: 18px;
-      font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   margin-bottom: 10px;
+  color: #ff5555;
 }
 
 .title h4:before {
@@ -48,39 +43,38 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; /* NGA: space-between → NE: center */
   gap: 20px;
 }
 
 .single-menu {
-  flex: 1 1 calc(33.333% - 20px); /* 3 në rresht */
-  background-color: #f9f9f9;
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #1f1f1f;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
   border-radius: 12px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 10px; /* ← kjo e shtyn pak djathtas */
 }
 
-/* Madhësi të njëtrajtshme për fotot */
+
 .single-menu img {
   width: 150px;
   height: 150px;
   object-fit: contain;
   border-radius: 50%;
-  border: 1px solid #ddd;
+  border: 1px solid #444;
   padding: 5px;
   transition: 0.5s;
   margin-bottom: 15px;
 }
 
-/* Efekti i hover – rrotullimi i ushqimit */
 .single-menu:hover img {
   transform: rotate(360deg);
   transition: transform 1.5s ease;
@@ -90,14 +84,15 @@ body {
   text-transform: capitalize;
   font-size: 22px;
   margin-bottom: 5px;
-  border-bottom: 1px dashed #333;
+  border-bottom: 1px dashed #888;
   padding-bottom: 5px;
   text-align: center;
+  color: white;
 }
 
 .menu-content h4 span {
   display: block;
-  color: red;
+  color: #ff4444;
   font-style: italic;
   font-size: 18px;
   margin-top: 5px;
@@ -105,15 +100,14 @@ body {
 
 .menu-content p {
   font-size: 14px;
-  color: #555;
+  color: #cccccc;
   margin-top: 5px;
   text-align: center;
 }
 
-/* Responsive për telefon */
 @media screen and (max-width: 768px) {
   .single-menu {
-    flex: 1 1 100%; /* 1 në rresht në telefon */
+    flex: 1 1 100%;
   }
 
   .menu-content h4 {
@@ -127,4 +121,8 @@ body {
   .menu-content p {
     font-size: 13px;
   }
+.menu .single-menu {
+  transform: translateX(-20px);
 }
+}
+
